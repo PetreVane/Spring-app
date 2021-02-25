@@ -10,12 +10,15 @@
 </head>
 
 <body>
-    <form action="/processForm" method="get"></form>
-    <input type="text"
-           name="studentName"
-            placeholder="What's your name?" />
 
-    <input type="submit" />
+    <form action="/demo/processForm" method="get">
+        <input type="text"
+               name="studentName"
+               placeholder="What's your name?" />
+        <input type="submit"/>
+    </form>
+
+
 
 </body>
 </html>

@@ -11,6 +11,11 @@
 
 <body>
     <h2> ${message}</h2>
+<br><br>
+
+<hr>
+<a href="/demo/showForm"> Show registration form </a>
+
 </body>
 
 </html>
