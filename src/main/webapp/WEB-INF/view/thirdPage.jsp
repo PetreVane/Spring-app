@@ -10,8 +10,10 @@
 </head>
 <body>
     Message from  Spring!
-<br><br>
-    Hello ${param.studentName}
+    <br><br>
+   Hello ${param.studentName}
+    <br><br>
+Here is your message: ${message}
 
 </body>
 

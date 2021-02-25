@@ -2,22 +2,36 @@ package controllers;
 
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 @Controller
 public class HelloWorldController {
 
     // need a controller method to show the inital form
 
-    @RequestMapping("/showForm")
+    @RequestMapping("/inputForm")
     public String showForm() {
-        return "helloworld-form";
+        return "secondPage";
     }
 
     // need a controller method to process the form
-    @RequestMapping("/processForm")
+    @RequestMapping("/outputForm")
     public String processForm() {
-        return "processForm";
+        return "thirdPage";
     }
 
+
+    @RequestMapping("/additionalOutputForm")
+    public String changeNameToCapitalLetters(HttpServletRequest request, Model model) {
+
+        String parameter = request.getParameter("studentName");
+        String capitalized = parameter.toUpperCase();
+        String message = "Dude, WTF?! " + capitalized;
+        model.addAttribute("message", message);
+
+        return "thirdPage";
+    }
 }
