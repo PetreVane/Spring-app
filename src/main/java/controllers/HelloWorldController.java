@@ -4,6 +4,7 @@ package controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -32,6 +33,16 @@ public class HelloWorldController {
         String message = "Dude, WTF?! " + capitalized;
         model.addAttribute("message", message);
 
+        return "thirdPage";
+    }
+
+
+    // using the @RequestParam("strudentName")
+    @RequestMapping("/optionalForm")
+    public String toCapitalLetters(@RequestParam("studentName") String student, Model model) {
+        String capitalized = student.toUpperCase();
+        String message = "Hello there " + capitalized;
+        model.addAttribute("message", message);
         return "thirdPage";
     }
 }

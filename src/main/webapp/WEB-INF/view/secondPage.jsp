@@ -11,7 +11,7 @@
 
 <body>
 
-    <form action="/demo/additionalOutputForm" method="get">
+    <form action="/demo/optionalForm" method="get">
         <input type="text"
                name="studentName"
                placeholder="What's your name?" />
