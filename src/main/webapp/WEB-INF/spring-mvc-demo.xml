@@ -17,6 +17,10 @@
     <!-- Step 4: Add support for conversion, formatting and validation support -->
     <mvc:annotation-driven/>
 
+    <!-- 4.1: Add mapping for css, js in your app -->
+    <mvc:resources mapping="/assets/**" location="/assets/"></mvc:resources>
+
+
     <!-- Step 5: Define Spring MVC view resolver -->
     <bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
