@@ -4,6 +4,8 @@ package controllers;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import javax.servlet.http.HttpServletRequest;
+
 @Controller
 @RequestMapping("/anotherPath")
 public class AdditionalController {
@@ -12,4 +14,5 @@ public class AdditionalController {
     public String getSecondPage() {
         return "secondPage";
     }
+
 }
