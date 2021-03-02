@@ -10,7 +10,9 @@
 
 
     <body>
-         Student name is: ${student.firstName} ${student.lastName }
+    Student name is: ${student.firstName} ${student.lastName }
+    <br><br>
+    Country of origin is: ${student.country}
 
     </body>
 

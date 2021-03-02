@@ -15,6 +15,8 @@
 
 <hr>
 <a href="/demo/student/registration"> Show registration form </a>
+    <br><br>
+    <a href="/demo/inputForm"> Show input page </a>
 
 </body>
 

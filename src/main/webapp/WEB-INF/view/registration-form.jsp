@@ -17,6 +17,12 @@
         Last name: <form:input path="lastName" />
         <br><br>
 
+        Country of origin: <form:select path="country">
+        <form:options items="${student.countriesList}"/>
+        </form:select>
+
+        <br><br>
+
         <input type="submit" value="Save Registration">
 
 
