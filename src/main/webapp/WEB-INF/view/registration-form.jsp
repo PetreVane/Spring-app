@@ -23,6 +23,10 @@
 
         <br><br>
 
+        Preferred programming language:
+        <form:radiobuttons items="${student.languageList}" path="prefferedLanguage"/>
+        <br><br>
+
         <input type="submit" value="Save Registration">
 
 

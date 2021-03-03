@@ -13,6 +13,8 @@
     Student name is: ${student.firstName} ${student.lastName }
     <br><br>
     Country of origin is: ${student.country}
+    <br><br>
+    Preferred programming language: ${student.prefferedLanguage}
 
     </body>
 

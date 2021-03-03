@@ -2,7 +2,9 @@ package Models;
 
 import org.springframework.beans.factory.annotation.Value;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Student {
@@ -10,11 +12,15 @@ public class Student {
     private String firstName;
     private String lastName;
     private String country;
+    private String prefferedLanguage;
     private LinkedHashMap<String, String> countriesList;
+    private List<String> languageList;
+
 
 
     public Student() {
         addCountries();
+        addLanguagesToList();
     }
 
     private void addCountries() {
@@ -24,6 +30,28 @@ public class Student {
         countriesList.put("FR", "France");
         countriesList.put("US", "United States");
         countriesList.put("IT", "Italy");
+    }
+
+    private void addLanguagesToList() {
+        languageList = new ArrayList<>();
+        languageList.add("Java");
+        languageList.add("C#");
+        languageList.add("Swift");
+        languageList.add("Python");
+    }
+
+
+    public String getPrefferedLanguage() {
+        return prefferedLanguage;
+    }
+
+    public void setPrefferedLanguage(String prefferedLanguage) {
+        int selectedLanguage = languageList.indexOf(prefferedLanguage);
+        this.prefferedLanguage = languageList.get(selectedLanguage);
+    }
+
+    public List<String> getLanguageList() {
+        return languageList;
     }
 
     public String getFirstName() {
