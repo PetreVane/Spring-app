@@ -53,7 +53,7 @@
       <artifactId>spring-beans</artifactId>
       <version>5.2.13.RELEASE</version>
     </dependency>
-    
+
   </dependencies>
 
   <build>
