@@ -1,26 +1,29 @@
 package Models;
 
-import org.springframework.beans.factory.annotation.Value;
-
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
 public class Student {
 
     private String firstName;
     private String lastName;
+    // country
     private String country;
-    private String prefferedLanguage;
     private LinkedHashMap<String, String> countriesList;
+    // programming language
+    private String preferredLanguage;
     private List<String> languageList;
+    // operating systems
+    private List<String> preferredOperatingSystem;
+    private List<String> listOfOperatingSystems;
 
 
 
     public Student() {
         addCountries();
         addLanguagesToList();
+        addOpToList();
     }
 
     private void addCountries() {
@@ -38,16 +41,35 @@ public class Student {
         languageList.add("C#");
         languageList.add("Swift");
         languageList.add("Python");
+        languageList.add("PHP");
     }
 
+    private void addOpToList() {
+        listOfOperatingSystems = new ArrayList<>();
+        listOfOperatingSystems.add("Linux");
+        listOfOperatingSystems.add("Microsoft");
+        listOfOperatingSystems.add("MacOS");
+    }
+
+    public List<String> getPreferredOperatingSystem() {
+        return preferredOperatingSystem;
+    }
+
+    public List<String> getListOfOperatingSystems() {
+        return listOfOperatingSystems;
+    }
+
+    public void setPreferredOperatingSystem(List<String> preferredOperatingSystem) {
+        this.preferredOperatingSystem = preferredOperatingSystem;
+    }
 
     public String getPrefferedLanguage() {
-        return prefferedLanguage;
+        return preferredLanguage;
     }
 
-    public void setPrefferedLanguage(String prefferedLanguage) {
-        int selectedLanguage = languageList.indexOf(prefferedLanguage);
-        this.prefferedLanguage = languageList.get(selectedLanguage);
+    public void setPrefferedLanguage(String preferredLanguage) {
+        int selectedLanguage = languageList.indexOf(preferredLanguage);
+        this.preferredLanguage = languageList.get(selectedLanguage);
     }
 
     public List<String> getLanguageList() {

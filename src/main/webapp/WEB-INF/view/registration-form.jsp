@@ -27,6 +27,10 @@
         <form:radiobuttons items="${student.languageList}" path="prefferedLanguage"/>
         <br><br>
 
+        Preferred operating systems:
+        <form:checkboxes items="${student.listOfOperatingSystems}" path="preferredOperatingSystem"/>
+
+        <br><br>
         <input type="submit" value="Save Registration">
 
 
